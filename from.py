@@ -98,3 +98,73 @@ def my_decorator(func):
         func()
         print("Something is happening afterthe function is called.")
     return wrapper   
+@my_decorator
+def say_hello():
+    print("HEllo")
+    
+#Модули и Пакеты/Модули - это файлы с кодом на Python, а пакеты - это каталоги, содержащие модули.
+import math
+print(math.sqrt(25))
+
+#Работа с HTTP/Модуль requests позволяет делать HTTP-запросы.
+import requests
+response = requests.get("https://#ввод ссылки")
+print(response.text)
+
+#Виртуальное окружение/"virtualenv" используется для создания изолированных окружений, что позволяет управлять зависимостями проекта.
+# Создание виртуального окружения
+python -m venv myenv
+
+#Управление Исключениями:try, except, finally используются для обработки исключений.
+try:
+    result = 10/0
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+finally:
+    print("This code will always execute.")
+    
+#Работа с Файлами:удобные средства для работы с файлами, такие как open(), read(), write().
+# Чтение из файла
+with open("example.txt","W" ) as file:
+    content = file.read()
+# Запись в файл
+with open("example.txt","W" ) as file:
+    file.write("Hello, world")
+    
+#Менеджеры контекста:Контекстные менеджеры, такие как with, используются для автоматического управления ресурсами.
+with open("example.txt", "r") as file:
+    content = file.read()
+# Файл автоматически закрывается после выхода из блока with
+
+#Модуль os предоставляет функции для взаимодействия с операционной системой, такие как создание/удаление директорий, работа с путями
+import os 
+# Создание директории
+os.mkdir("my_directory")
+
+# Получение текущего рабочего каталога
+current_directory = os.getcwd()
+
+#Обработка строк:Методы строк, такие как split(), join(), strip(), позволяют легко работать с текстовой информацией.
+sentence = "Hello, World"
+stripped_sentence = sentence.strip()
+words = stripped_sentence.split()
+
+#Индексы и Срезы:Python использует индексы и срезы для доступа к элементам в строках, списках и других последовательностях.
+my_list = [1, 2, 3, 4, 5]
+first_element = my_list[0]
+sliced_list = my_list[1:4]
+
+#Установка и Использование Библиотек:Используйте инструменты установки пакетов, такие как pip, для установки сторонних библиотек. Затем вы можете использовать их в своих программах.
+pip install название_пакета
+#Пример: писать в терменале или в командной строке.
+pip install pygame
+
+#Работа с JSON
+import json
+data = {"name": "John", "age": 30}
+json_data = json.dumps(data)
+
+#Встроенные функции:Python предоставляет множество встроенных функций, таких как len(), max(), min(), sum(), которые облегчают работу с данными.
+numbers = [1, 2, 3, 4, 5]
+length = len(numbers)
+total = sum(numbers)
